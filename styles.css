@@ -1,0 +1,109 @@
+body{
+  padding:0;
+  margin:0;
+  background-color:rgb(63, 63, 103);
+}
+
+main{
+  background-color:rgb(35, 35, 158);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:10px;
+}
+
+#pad-bank{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+
+
+}
+
+.drum-pad{
+  color:white;
+   background-color:grey;
+  text-align:center;
+   border-radius:3px;
+   padding:10px;
+   cursor:pointer;
+    border:none;
+}
+
+
+
+.drum-pad:hover{
+  background-color:rgb(234, 84, 84);
+}
+
+#boton{
+display:flex;
+align-items:center;
+gap:60px;
+
+margin-bottom:17px;
+}
+
+.switch{
+  height:10px;
+  width:40px;
+
+  position:relative;
+  display: inline-block;
+  padding:7px;
+}
+
+.switch input{
+display:none;
+}
+
+.slider{
+  background-color:rgb(188, 186, 186);
+
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+
+  transition: 0.5s;
+  cursor:pointer;
+  border-radius:24px;
+}
+
+.slider:before{
+  position:absolute;
+  background-color:white;
+  height:18px;
+  width:18px;
+  left:3px;
+  bottom:3px;
+  transition:0.5s;
+  border-radius:50%;
+
+  content:"";
+}
+
+input:checked + .slider{
+  background-color:rgb(79, 203, 79);
+}
+
+input:checked + .slider:before{
+transform: translateX(26px);
+}
+
+#power{
+  color:white;
+}
+
+#display{
+  background-color:rgb(71, 69, 69);
+  border:none;
+  color:white;
+  height:30px;
+
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
